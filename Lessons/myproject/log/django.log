@@ -1,0 +1,32 @@
+Watching for file changes with StatReloader
+D:\Studies\Django\myproject\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2169
+"GET /prefix/ HTTP/1.1" 200 13
+D:\Studies\Django\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Index page accessed
+"GET /prefix/ HTTP/1.1" 200 13
+Error in about page: division by zero
+Traceback (most recent call last):
+  File "D:\Studies\Django\myproject\myapp\views.py", line 16, in about
+    result = 1 / 0
+ZeroDivisionError: division by zero
+"GET /prefix/about/ HTTP/1.1" 200 27
+D:\Studies\Django\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Studies\Django\myproject\myproject\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Studies\Django\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-06 19:34:31,705 autoreload 17476 3964 Watching for file changes with StatReloader
+INFO 2023-12-06 19:34:39,835 autoreload 17476 3964 D:\Studies\Django\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-06 19:34:41,124 autoreload 15972 21748 Watching for file changes with StatReloader
+ERROR 2023-12-06 19:34:52,921 views 15972 17796 Error in about page: division by zero
+Traceback (most recent call last):
+  File "D:\Studies\Django\myproject\myapp\views.py", line 16, in about
+    result = 1 / 0
+ZeroDivisionError: division by zero
+INFO 2023-12-06 19:34:52,921 basehttp 15972 17796 "GET /prefix/about/ HTTP/1.1" 200 27
+INFO 2023-12-06 19:34:57,908 views 15972 17796 Index page accessed
+INFO 2023-12-06 19:34:57,908 basehttp 15972 17796 "GET /prefix/ HTTP/1.1" 200 13
