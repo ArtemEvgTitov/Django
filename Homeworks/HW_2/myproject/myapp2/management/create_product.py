@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = "Create product."
 
     def handle(self, *args, **kwargs):
-        user = Product(name='Pasta', description='Italian pasta', price=450.00, quantity=1,
+        product = Product(name='Pasta', description='Italian pasta', price=450.00, quantity=1,
                        registration=datetime.date(2023, 12, 5))
-        user.save()
-        self.stdout.write(f'{user}')
+        product.save()
+        self.stdout.write(f'{product}')
