@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
-    help = "Create user."
+    help = "Create product."
 
     def handle(self, *args, **kwargs):
         user = Product(name='Pasta', description='Italian pasta', price=450.00, quantity=1,
