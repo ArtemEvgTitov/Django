@@ -10,8 +10,8 @@ class Command(BaseCommand):
         parser.add_argument('product_id', type=int, help='Product ID')
 
     def handle(self, *args, **kwargs):
-        user_id = kwargs['user_id']
-        product_id = kwargs['product_id']
+        user_id = kwargs.get('user_id')
+        product_id = kwargs.get('product_id')
 
         user = User.objects.filter(pk=user_id).first()
         product = Product.objects.filter(pk=product_id).first()
