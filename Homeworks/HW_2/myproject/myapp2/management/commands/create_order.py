@@ -11,10 +11,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         user_id = kwargs['user_id']
-        product_id = kwargs['product_id']
 
         user = User.objects.filter(pk=user_id).first()
-        products = Product.objects.filter(pk__in=product_id)
+        products = Product.objects.all()
         total_price = sum(product.price for product in products)
 
         if user and products:
