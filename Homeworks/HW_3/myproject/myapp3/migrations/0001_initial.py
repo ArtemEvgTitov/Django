@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('total_price', models.DecimalField(decimal_places=2, max_digits=8)),
-                ('date_ordered', models.DateTimeField(auto_now_add=True)),
+                ('date_ordered', models.DateTimeField(auto_now_add=False)),
                 ('products', models.ManyToManyField(to='myapp3.product')),
                 ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapp3.user')),
             ],

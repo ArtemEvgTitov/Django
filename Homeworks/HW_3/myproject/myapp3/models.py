@@ -9,7 +9,7 @@ class User(models.Model):
     registration = models.DateField()
 
     def __str__(self):
-        return f'Username: {self.name}, email: {self.email}'
+        return f'{self.name}, {self.email}, {self.phone_number}, {self.address}'
 
 
 class Product(models.Model):
@@ -27,7 +27,7 @@ class Order(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
     total_price = models.DecimalField(max_digits=8, decimal_places=2)
-    date_ordered = models.DateTimeField(auto_now_add=True)
+    date_ordered = models.DateTimeField(auto_now_add=False)
 
     def __str__(self):
-        return f'Customer: {self.customer}, total price: {self.total_price}'
+        return f'Customer: {self.customer}, total price: {self.total_price} products: {self.products}'
