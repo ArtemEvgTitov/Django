@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<div class="content text-center mt-5 mb-5">
+    <h5>All Clients</h5>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+
+            <th scope="col">Weekly Orders</th>
+            <th scope="col">Monthly Orders</th>
+            <th scope="col">All Orders</th>
+        </tr>
+        </thead>
+        {% for key, value in users.items %}
+
+        <tbody>
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+
+            <td><a class="btn btn-warning" href="{% url 'order_week' key %}" role="button">detail...</a>
+            <td><a class="btn btn-info" href="{% url 'order_month' key %}" role="button">detail...</a>
+            <td><a class="btn btn-success" href="{% url 'all_orders' key %}" role="button">detail...</a>
+        </tr>
+        </tbody>
+
+        {% endfor %}
+    </table>
+    <a class="btn btn-primary mt-5 mb-5" href="/index/" role="button">Back</a>
+</div>
+{% endblock %}
